@@ -1,0 +1,6 @@
+.atom/
+.cache/
+.config/
+.dotnet/
+.flatiron-school/
+# Add other files and directories to ignore here
