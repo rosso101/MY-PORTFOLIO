@@ -1,0 +1,140 @@
+body{
+    background-color: rgb(12, 10, 61);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: burlywood;
+}
+#head{
+    border-radius: 48px;
+    background: linear-gradient(145deg, #6475f5, #5462ce);
+    box-shadow:  50px 50px 100px #4955b3,
+                 -50px -50px 100px #7185ff;
+color: turquoise;
+}
+#vic{
+    border-radius: 48px;
+    background: #5d6de5;
+    box-shadow:  -50px -50px 100px #343d80,
+                 50px 50px 100px #869dff;
+}
+
+.form{
+    color: turquoise;
+}
+.footer{
+    color: turquoise;
+}
+#socials{
+    display: flex;
+    flex-direction: row;
+    border-radius: 41px;
+background: linear-gradient(225deg, #282424, #211f1f);
+box-shadow:  -41px 41px 82px #141212,
+             41px -41px 82px #363232;
+}
+
+/* From uiverse.io by @Ali-Tahmazi99 */
+button {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #03045e;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+   }
+   
+   button::before,
+   button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+   }
+   
+   button::before {
+    left: -10px;
+    background: #240046;
+   }
+   
+   button::after {
+    right: -10px;
+    background: #5a189a;
+   }
+   
+   button:hover::before,
+   button:hover::after {
+    width: 58%;
+   }
+   
+   button:hover span {
+    color: #e0aaff;
+    transition: 0.3s;
+   }
+   
+   button span {
+    color: #03045e;
+    font-size: 18px;
+    transition: all 0.3s ease-in;
+   }
+
+   .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .cards .red {
+    background: #5a4290; 
+ 
+    background: linear-gradient(45deg, #ffdf9e 0%,#ffc273 25%,#e56969 50%,#e56969,75%,#8a49a1 100%); 
+  }
+  
+  .cards .blue {
+    background-color: #25D366;
+  }
+  
+  .cards .green {
+    background-color: #d90505;
+    background: linear-gradient(45deg, #f0f0f0 0%,25%,#ff0026 50%,#ffffff 75%,  #bc1818 100%);
+  }
+  
+  .cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100px;
+    width: 250px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+  }
+  
+  .cards .card p.tip {
+    font-size: 1em;
+    font-weight: 700;
+  }
+  
+  .cards .card p.second-text {
+    font-size: .7em;
+  }
+  
+  .cards .card:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+  .cards:hover > .card:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+  }
