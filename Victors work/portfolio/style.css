@@ -4,6 +4,9 @@ body{
     flex-direction: column;
     text-align: center;
     color: burlywood;
+    font-family: Arial, Helvetica, sans-serif;
+
+
 }
 #head{
     border-radius: 48px;
@@ -17,6 +20,7 @@ color: turquoise;
     background: #5d6de5;
     box-shadow:  -50px -50px 100px #343d80,
                  50px 50px 100px #869dff;
+           font-size: larger;      
 }
 
 .form{
@@ -132,9 +136,54 @@ button {
   
   .cards .card:hover {
     transform: scale(1.1, 1.1);
+    display: flex;
   }
   
   .cards:hover > .card:not(:hover) {
     filter: blur(10px);
     transform: scale(0.9, 0.9);
   }
+
+  #video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%; /* Adjust the width as needed */
+    height: 50%; /* Adjust the height as needed */
+    overflow: hidden;
+    z-index: -1;
+  }
+  #video{
+    object-fit: cover;
+    width: 100%; /* Ensure the video covers the entire container */
+    height: 100%;
+  }
+
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+#form{
+    text-align: left;
+}
