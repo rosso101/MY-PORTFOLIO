@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome to Vic's Birthday Message Board</h1>
+    <p><h2>YES! Vic is finally 18. He has come a long way,take your time and congratulate for his previous achivements.<br/>Vic clearly has a deep love for his friends and family.<br/>THAT ICLUDES YOU</h2></p>
+
+    <form id="message-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+
+    <div id="message-board"></div>
+
+    <script>
+        const messages = [];
+
+        function addMessage(name, message) {
+            messages.push({ name, message });
+
+            const messageElement = document.createElement("div");
+            messageElement.innerHTML = `<strong>${name}:</strong> ${message}`;
+
+            document.getElementById("message-board").appendChild(messageElement);
+        }
+
+        document.getElementById("message-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const message = document.getElementById("message").value;
+
+            addMessage(name, message);
+            alert("Message sent!");
+
+            document.getElementById("name").value = "";
+            document.getElementById("message").value = "";
+        });
+    </script>
+
+</body>
+</html>
